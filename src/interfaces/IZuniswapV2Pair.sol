@@ -14,6 +14,7 @@ interface IZuniswapV2Pair {
 
     function mint(address) external returns (uint256);
 
+    // burn returns both token in pair
     function burn(address) external returns (uint256, uint256);
 
     function transferFrom(
@@ -22,6 +23,7 @@ interface IZuniswapV2Pair {
         uint256
     ) external returns (bool);
 
+    // calldata is need to support flash swap
     function swap(
         uint256,
         uint256,
